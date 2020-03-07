@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+<html  lang="ko">
+<head>
+    <meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 4.2.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>카테고리: servers - 혼자 놀기의 지겨움</title>
+
+
+    <meta property="og:type" content="website">
+<meta property="og:title" content="혼자 놀기의 지겨움">
+<meta property="og:url" content="https://devlonesome.github.io/categories/servers/index.html">
+<meta property="og:site_name" content="혼자 놀기의 지겨움">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://devlonesome.github.io/images/og_image.png">
+<meta property="article:author" content="Seungrok Han">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://devlonesome.github.io/images/og_image.png">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/favicon.svg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+<style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+
+    
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+
+    
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+    
+    
+    
+    
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+    
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+    
+    
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-3-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/openmake_logo.svg" alt="혼자 놀기의 지겨움" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item"
+                href="/">Home</a>
+                
+                <a class="navbar-item"
+                href="/archives">Archives</a>
+                
+                <a class="navbar-item"
+                href="/categories">Categories</a>
+                
+                <a class="navbar-item"
+                href="/tags">Tags</a>
+                
+                <a class="navbar-item"
+                href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                
+                
+                <a class="navbar-item search" title="검색" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    <div class="card-content">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            <li><a href="/categories">카테고리</a></li>
+            
+            <li class="is-active"><a href="#" aria-current="page">servers</a></li>
+        </ul>
+        </nav>
+    </div>
+</div>
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2016-01-01T14:40:00.000Z">2016-01-01</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/servers/">servers</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    4분 읽기 (대략 647 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2016/01/01/node.js-compile-on-raspbian/">Node.js Compilation on Raspbian, Raspberrypi 2</a>
+            
+        </h1>
+        <div class="content">
+            <p>개인적으로 영 적응이 안되던 Node.js가 5.3.0 까지 나왔다.<br>라즈베리파이에서 한번 써볼까 하여 compile을 해보았다.</p>
+<h3 id="Compile-을-위한-준비"><a href="#Compile-을-위한-준비" class="headerlink" title="Compile 을 위한 준비"></a>Compile 을 위한 준비</h3><p>Raspbian Jessie는 개인적으로 아직까지 잘 사용하지 않는다.<br>Jessie와 Wheezy는 커널 구조상 다른지, 컴파일러 버전때문인지, 컴파일시 호환이 안되는 부분이 상당하다.<br>이번 Node.js도 마찬가지로, Jessie에서는 되는지 모르겠으나, Wheezy에서는 컴파일이 되지 않는다.<br>다행히 먼저 해결해논 용자가 있어 참고 하였다. ( 없었더라면 한달은 삽질을 하지 않았을까 싶다. 성공이나 했으려나…)<br><a href="http://andyfelong.com/2015/11/node-js-v4-1-0-on-raspberry-pi-2/">Node.js v4 &amp; v5 on Raspberry Pi 2</a></p>
+<p>gcc version을 바꾸는 일이다.</p>
+<p>/etc/apt/sources.list 파일의 Repository를 아래와 같이 수정한다.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo nano /etc/apt/sources.list</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">deb http://mirrordirector.raspbian.org/raspbian/ wheezy main contrib non-free rpi</span><br><span class="line"><span class="meta">#</span><span class="bash"> Remove <span class="string">'#'</span>Character</span></span><br><span class="line">deb http://archive.raspbian.org/raspbian wheezy main contrib non-free rpi</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> Source repository to add</span></span><br><span class="line">deb-src http://archive.raspbian.org/raspbian wheezy main contrib non-free rpi</span><br><span class="line">deb http://mirrordirector.raspbian.org/raspbian/ jessie main contrib non-free rpi</span><br><span class="line">deb http://archive.raspbian.org/raspbian jessie main contrib non-free rpi</span><br><span class="line"><span class="meta">#</span><span class="bash"> Source repository to add</span></span><br><span class="line">deb-src http://archive.raspbian.org/raspbian jessie main contrib non-free rpi</span><br></pre></td></tr></table></figure>
+
+<p>/etc/apt/preferences 파일을 새로 만든다.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo nano /etc/apt/preferences</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Package: *</span><br><span class="line">Pin: release n=wheezy</span><br><span class="line">Pin-Priority: 900</span><br><span class="line">Package: *</span><br><span class="line">Pin: release n=jessie</span><br><span class="line">Pin-Priority: 300</span><br><span class="line">Package: *</span><br><span class="line">Pin: release o=Raspbian</span><br><span class="line">Pin-Priority: -10</span><br></pre></td></tr></table></figure>
+
+<p>Raspbian 의 Package List를 업데이트 한다.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo apt-get update</span></span><br></pre></td></tr></table></figure>
+
+<p>Jessie Repositories의 gcc/g++ 4.8을 인스톨한다.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo apt-get install -t jessie gcc-4.8 g++-4.8</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo update-alternatives --remove-all gcc</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo update-alternatives --remove-all g++</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.6 20</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 50</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.6 20</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 50</span></span><br></pre></td></tr></table></figure>
+
+<p>gcc version을 확인해보자.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo gcc --version</span></span><br></pre></td></tr></table></figure>
+
+<p>혹시, gcc버전을 바꾸고 싶다면 아래와 같이 하면 된다.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo update-alternatives --config gcc</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo update-alternatives --config g++</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Source-Download"><a href="#Source-Download" class="headerlink" title="Source Download"></a>Source Download</h3><p><a href="https://nodejs.org/en/download/">nodejs.org 공식홈의 Download Page</a>에서 Source Code 주소를 얻을 수 있다.</p>
+<p>라즈베리파이에서 아래와 같이 하여 source 파일을 download한다.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> wget https://nodejs.org/dist/v4.2.4/node-v4.2.4.tar.gz</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> tar -xzf node-v4.2.4.tar.gz</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Compile-amp-Install-Node-js"><a href="#Compile-amp-Install-Node-js" class="headerlink" title="Compile &amp; Install Node.js"></a>Compile &amp; Install Node.js</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> node-v4.2.4</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ./configure</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> make -j4</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo make install</span></span><br></pre></td></tr></table></figure>
+
+<p>Node.js의 버전을 확인하여 Install이 완료되었는지 확인하자.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> node -v</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> npm -v</span></span><br></pre></td></tr></table></figure>
+
+<p>다음으로는, Express도 깔고 Javascript프로젝트도 돌려보도록 하자. (언제가 될지 모르지만…)</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2015-10-08T22:40:00.000Z">2015-10-09</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/servers/">servers</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    8분 읽기 (대략 1222 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2015/10/09/sd-resize-and-back-up-image-file-on-osx%20copy/">SD Resize and Back up Image File on OSX</a>
+            
+        </h1>
+        <div class="content">
+            <p><a href="http://www.raspberrypi.org">라즈베리파이</a>를 사용하다 보면 Image를 Backup/Restore 할 일이 발생한다.<br><a href="http://www.rasplay.org">산딸기마을</a>에서는 <code>멀티제어RCCar</code> 이미지 라던지, <code>PiSnap</code> 이미지라던지. 이들의 배포를 하기위해서도 Backup이 필요하다.<br>Backup을 처음 했던 때 부터 생각했던 문제였지만, Backup된 Image의 Size는 무엇인가 불만스러움이 있었다.<br>본인은 혹시 모를 용량 부족을 예방하기위해 32G의 SD를 사용하지만, 실제 배포를 위한 사용량은 4G에 불과하다.<br>4G를 Restore하기 위해 32G Backup 파일을 Download/Restore 한다면, 32/4 배의 시간을 낭비하는 것.<br>아마도 몇년간 가진 모임 참석자들은 이 문제에 대해서 불만을 토로하고 있을 것이다.</p>
+<p>Windows사용자는 <a href="http://sourceforge.net/projects/win32diskimager/">Win32 Disk Imager</a>를 사용해서 Backup/Restore를 할 것이고, OSX사용자를 위해서는 <a href="http://www.tweaking4all.com/hardware/raspberry-pi/macosx-apple-pi-baker/">ApplePi-Baker</a>라는 훌륭한 GUI Tool 을 사용할 것이다.<br><img src="http://i1.wp.com/www.rasplay.org/wp-content/uploads/win32_1.jpg" alt="Win32 Disk Imager"><br><img src="http://www.tweaking4all.com/wp-content/uploads/2014/01/applepi-baker-restore-with-compression.jpg" alt="ApplePi-Baker"><br>또는 <code>dd</code>명령어도 잘 사용하여 CLI상에서 처리하는 사용자도 있을 것이다.<br>아무튼, 몇번이고 찾고, 몇번이고 시도했지만 실패했던 문제가 아주 쉬운 방법으로 해결되었다.<br>본격적으로 <code>Mac OSX에서 Command 로 SD Card의 Backup image를 줄이는 방법</code>에 대해서 알아보자.<br>열심히 구글링 한 결과, 아래의 링크들을 통해 해결을 볼 수 있었다.<br><a href="http://www.htpcguides.com/easy-resize-and-back-up-raspberry-pi-sd-card-with-ubuntu/">http://www.htpcguides.com/easy-resize-and-back-up-raspberry-pi-sd-card-with-ubuntu/</a><br><a href="[http://askubuntu.com/questions/390769/how-do-i-resize-partitions-using-command-line-without-using-a-gui-on-a-server]">http://askubuntu.com/questions/390769/how-do-i-resize-partitions-using-command-line-without-using-a-gui-on-a-server</a></p>
+<h3 id="How-to-on-ubuntu"><a href="#How-to-on-ubuntu" class="headerlink" title="How to on ubuntu ?"></a>How to on ubuntu ?</h3><p>ubuntu에서는 <a href="http://gparted.org">Gparted</a>를 사용하여 GUI환경으로 resize를 해결할 수 있었다.<br>[Easy Resize and Back up Raspberry Pi SD Card with Ubuntu][resize-sd-ubuntu-link]</p>
+<h3 id="Install-ext-partition-utility-on-OSX"><a href="#Install-ext-partition-utility-on-OSX" class="headerlink" title="Install ext partition utility on OSX"></a>Install ext partition utility on OSX</h3><p>알다시피 라즈베리파이SD에는 두개의 partitions으로 되어있다.<br><code>vfat</code>과 <code>ext4</code>으로, 실제 부팅 partition인 ext4를 OSX에서 인식하기 위해서는 추가 S/W가 필요하다.<br>이를 해결하기 위해 <a href="http://e2fsprogs.sourceforge.net">E2fsprogs: Ext2/3/4 Filesystem Utilities</a>를 설치하자.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> brew install e2fsprogs</span></span><br></pre></td></tr></table></figure>
+
+<p><a href="http://brew.sh">Homebrew</a>가 설치되지 않아 <code>brew</code>명령어가 깔려있지 않다면, <a href="http://brew.sh">http://brew.sh</a>를 참고하기 바란다.</p>
+<h3 id="Resize-SD-Card"><a href="#Resize-SD-Card" class="headerlink" title="Resize SD Card"></a>Resize SD Card</h3><p>저장 위치를 알지 못해서 검색해보았다.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo find / -name e2fsprogs</span></span><br></pre></td></tr></table></figure>
+<p><code>/usr/local/opt/e2fsprogs</code>에 설치되었으니 이동하여 확인해보자.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> /usr/<span class="built_in">local</span>/opt/e2fsprogs</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ls</span></span><br><span class="line">COPYING			bin			lib</span><br><span class="line">INSTALL_RECEIPT.json	etc			sbin</span><br><span class="line">README			include			share</span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> sbin</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ls</span></span><br><span class="line">badblocks	e2image		fsck.ext2	mkfs.ext2	tune2fs</span><br><span class="line">blkid		e2label		fsck.ext3	mkfs.ext3	uuidd</span><br><span class="line">debugfs		e2undo		fsck.ext4	mkfs.ext4</span><br><span class="line">dumpe2fs	filefrag	fsck.ext4dev	mkfs.ext4dev</span><br><span class="line">e2freefrag	findfs		logsave		mklost+found</span><br><span class="line">e2fsck		fsck		mke2fs		resize2fs</span><br></pre></td></tr></table></figure>
+
+<p><code>resize2fs</code>명령어가 보인다.<br>실행시켜보니 실행은 안되고 <code>e2fsck -f</code>를 실행하라고 친절하게 알려준다.<br>순진하게 그대로 따라한다.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo ./e2fsck -f /dev/disk2s2</span></span><br></pre></td></tr></table></figure>
+
+<p><code>/dev/disk2s2</code>는 resize 하고자 하는 ext partition이다.<br>라즈베리파이의 root partition을 resize하고 있는 중이다.<br>완료되고 나서 resize2fs를 실행하자.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo ./resize2fs /dev/disk2s2 4G</span></span><br></pre></td></tr></table></figure>
+
+<p>partition을 4G로 resize하였다.<br>위에 언급한 ubuntu에서는 최소 용량을 가이드해 주는데, 여기서는 알아낼 방법을 모르니 그냥 4G로 넘겨짚었다.<br>용량을 모른다면 알고 나서 진행하도록 하자. <code>실제사용량 +200M</code> 가 안전할 듯 하다.<br>그리고, 4.2G일때는 4200M로 입력해야 된다.</p>
+<h3 id="Backup-SD-Card"><a href="#Backup-SD-Card" class="headerlink" title="Backup SD Card"></a>Backup SD Card</h3><p>이제 Resize 완료된 SD Card를 .img 파일로 Backup 해 보자.<br>시간이 남아 돌거나, 해보지 않았다면 <a href="http://sourceforge.net/projects/win32diskimager/">Win32 Disk Imager</a>, <a href="http://www.tweaking4all.com/hardware/raspberry-pi/macosx-apple-pi-baker/">ApplePi-Baker</a>를 이용해서 Backup해 보라.<br>SD Card 용량이 고스란히 Backup 될 것이다. 32G SD라면 .img의 용량은 32G가 될 것이고, 시간은 1시간이 걸릴지 모른다.</p>
+<p>아래의 명령어로 Backup해 보자. OSX나 Linux등에서 사용가능한 명령어다.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo dd <span class="keyword">if</span>=/dev/disk2 of=/home/rasplay/raspberrypibackup.img bs=1m count=4800</span></span><br></pre></td></tr></table></figure>
+
+<p>이제 라즈베리파이에서 돌려보자.<br>잘 돌아가는지 모르겠다.</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2015-07-23T08:35:01.000Z">2015-07-23</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/servers/">servers</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    1분 읽기 (대략 145 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2015/07/23/aws-amazon-web-services-review/">용어 정리</a>
+            
+        </h1>
+        <div class="content">
+            <p>첫 포스트입니다.<br>세상은 넓고 중국인은 많고 새로운 기술은 널렸다.ㅠㅠ</p>
+<h3 id="AWS-Amazon-Web-Services"><a href="#AWS-Amazon-Web-Services" class="headerlink" title="AWS( Amazon Web Services )"></a>AWS( Amazon Web Services )</h3><ul>
+<li><p><code>EC2</code> <em>(Amazon Elastic Compute Cloud)</em> - 가상서버</p>
+</li>
+<li><p><code>S3</code> <em>(Amazon Simple Storage Service)</em> - 인터넷 스토리지</p>
+</li>
+<li><p><code>RDS</code> <em>(Amazon Relational Database Service)</em> - RDBMS</p>
+</li>
+<li><p><code>Cloudfront</code> <em>(Amazon Cloudfront)</em> - 콘텐츠 배포</p>
+</li>
+<li><p><code>Elastic Transcoder</code> - 소스 형식의 미디어 파일을 스마트폰, 태블릿, PC 등의 디바이스에서 재생되는 버전으로 변환(또는 “트랜스코딩”)</p>
+</li>
+<li><p><code>xDD</code> <em>(xxxx-Driven Development)</em> </p>
+</li>
+<li><p><code>TDD</code> <em>(Test-Driven Development)</em></p>
+</li>
+<li><p><code>BDD</code> <em>(Behaviour-Driven Development)</em></p>
+</li>
+<li><p><code>Rspec</code> - BDD for Ruby</p>
+</li>
+<li><p><code>Cucumber</code> - Simple, human collaboration</p>
+</li>
+<li><p><code>Code Climate</code> - helping you diagnose and fix issues ,better code, faster</p>
+</li>
+</ul>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered" style="flex-shrink: 1">
+                <div>
+                    
+                    <figure class="image is-128x128 has-mb-6">
+                        <img class="" src="/images/openmake_logo.svg" alt="Seungrok Han">
+                    </figure>
+                    
+                    <p class="is-size-4 is-block">
+                        Seungrok Han
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        혼자 놀기의 지겨움
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>Korea</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        포스트
+                    </p>
+                    <a href="/archives">
+                        <p class="title has-text-weight-normal">
+                            15
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        카테고리
+                    </p>
+                    <a href="/categories">
+                        <p class="title has-text-weight-normal">
+                            8
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        태그
+                    </p>
+                    <a href="/tags">
+                        <p class="title has-text-weight-normal">
+                            7
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank" rel="noopener"
+                title="Github" href="https://github.com/devlonesome">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" rel="noopener"
+                title="Facebook" href="https://facebook.com/goldbassist">
+                
+                <i class="fab fa-facebook"></i>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+</div>
+    
+        
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            링크
+        </h3>
+        <ul class="menu-list">
+        
+            <li>
+                <a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener">
+                    <span class="level-left">
+                        <span class="level-item">Hexo</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">hexo.io</span>
+                    </span>
+                </a>
+            </li>
+        
+            <li>
+                <a class="level is-mobile" href="https://github.com/ppoffice" target="_blank" rel="noopener">
+                    <span class="level-left">
+                        <span class="level-item">PPOffice</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">github.com</span>
+                    </span>
+                </a>
+            </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                카테고리
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/DevOps/">
+            <span class="level-start">
+                <span class="level-item">DevOps</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/IDE/">
+            <span class="level-start">
+                <span class="level-item">IDE</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Software-Basic/">
+            <span class="level-start">
+                <span class="level-item">Software Basic</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/front-end/">
+            <span class="level-start">
+                <span class="level-item">front-end</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/jekyll-update/">
+            <span class="level-start">
+                <span class="level-item">jekyll update</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/machinelearning/">
+            <span class="level-start">
+                <span class="level-item">machinelearning</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/programmer/">
+            <span class="level-start">
+                <span class="level-item">programmer</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/servers/">
+            <span class="level-start">
+                <span class="level-item">servers</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            태그 클라우드
+        </h3>
+        <a href="/tags/IDE-Text-Editor-Sublime-Text/" style="font-size: 10px;">IDE, Text Editor, Sublime Text</a> <a href="/tags/devops-docker/" style="font-size: 20px;">devops, docker</a> <a href="/tags/front-end-javascript/" style="font-size: 10px;">front-end, javascript</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/node-js/" style="font-size: 10px;">node.js</a> <a href="/tags/programmer-study/" style="font-size: 10px;">programmer, study</a>
+    </div>
+</div>
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+            <div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            최근 글
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2020/03/07/markdown-syntax-example/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="markdown-syntax-example">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-07T13:08:46.114Z">2020-03-07</time></div>
+                    <a href="/2020/03/07/markdown-syntax-example/" class="title has-link-black-ter is-size-6 has-text-weight-normal">markdown-syntax-example</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/03/07/2016-2-20-IDEs-Sublime-Text/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Sublime Text 사용">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-07T13:08:46.113Z">2020-03-07</time></div>
+                    <a href="/2020/03/07/2016-2-20-IDEs-Sublime-Text/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Sublime Text 사용</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/IDE/">IDE</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/03/07/hello-world/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Hello World">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-07T13:08:46.113Z">2020-03-07</time></div>
+                    <a href="/2020/03/07/hello-world/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Hello World</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/03/07/github-io-with-hexo/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="github.io with hexo">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-07T11:53:37.000Z">2020-03-07</time></div>
+                    <a href="/2020/03/07/github-io-with-hexo/" class="title has-link-black-ter is-size-6 has-text-weight-normal">github.io with hexo</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2016/03/05/using-docker/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Using Docker">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2016-03-04T16:07:01.000Z">2016-03-05</time></div>
+                    <a href="/2016/03/05/using-docker/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Using Docker</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/DevOps/">DevOps</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            아카이브
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/03/">
+                <span class="level-start">
+                    <span class="level-item">3월 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2016/03/">
+                <span class="level-start">
+                    <span class="level-item">3월 2016</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2016/02/">
+                <span class="level-start">
+                    <span class="level-item">2월 2016</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2016/01/">
+                <span class="level-start">
+                    <span class="level-item">1월 2016</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2015/10/">
+                <span class="level-start">
+                    <span class="level-item">10월 2015</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2015/07/">
+                <span class="level-start">
+                    <span class="level-item">7월 2015</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2015/01/">
+                <span class="level-start">
+                    <span class="level-item">1월 2015</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                태그
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/IDE-Text-Editor-Sublime-Text/">
+                        <span class="tag">IDE, Text Editor, Sublime Text</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/devops-docker/">
+                        <span class="tag">devops, docker</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/front-end-javascript/">
+                        <span class="tag">front-end, javascript</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/github/">
+                        <span class="tag">github</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/hexo/">
+                        <span class="tag">hexo</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/node-js/">
+                        <span class="tag">node.js</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/programmer-study/">
+                        <span class="tag">programmer, study</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+        
+        </div>
+    
+</div>
+
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
+    
+        <div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            최근 글
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2020/03/07/markdown-syntax-example/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="markdown-syntax-example">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-07T13:08:46.114Z">2020-03-07</time></div>
+                    <a href="/2020/03/07/markdown-syntax-example/" class="title has-link-black-ter is-size-6 has-text-weight-normal">markdown-syntax-example</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/03/07/2016-2-20-IDEs-Sublime-Text/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Sublime Text 사용">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-07T13:08:46.113Z">2020-03-07</time></div>
+                    <a href="/2020/03/07/2016-2-20-IDEs-Sublime-Text/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Sublime Text 사용</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/IDE/">IDE</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/03/07/hello-world/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Hello World">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-07T13:08:46.113Z">2020-03-07</time></div>
+                    <a href="/2020/03/07/hello-world/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Hello World</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/03/07/github-io-with-hexo/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="github.io with hexo">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-07T11:53:37.000Z">2020-03-07</time></div>
+                    <a href="/2020/03/07/github-io-with-hexo/" class="title has-link-black-ter is-size-6 has-text-weight-normal">github.io with hexo</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2016/03/05/using-docker/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Using Docker">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2016-03-04T16:07:01.000Z">2016-03-05</time></div>
+                    <a href="/2016/03/05/using-docker/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Using Docker</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/DevOps/">DevOps</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            아카이브
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/03/">
+                <span class="level-start">
+                    <span class="level-item">3월 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2016/03/">
+                <span class="level-start">
+                    <span class="level-item">3월 2016</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2016/02/">
+                <span class="level-start">
+                    <span class="level-item">2월 2016</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2016/01/">
+                <span class="level-start">
+                    <span class="level-item">1월 2016</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2015/10/">
+                <span class="level-start">
+                    <span class="level-item">10월 2015</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2015/07/">
+                <span class="level-start">
+                    <span class="level-item">7월 2015</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2015/01/">
+                <span class="level-start">
+                    <span class="level-item">1월 2015</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                태그
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/IDE-Text-Editor-Sublime-Text/">
+                        <span class="tag">IDE, Text Editor, Sublime Text</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/devops-docker/">
+                        <span class="tag">devops, docker</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/front-end-javascript/">
+                        <span class="tag">front-end, javascript</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/github/">
+                        <span class="tag">github</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/hexo/">
+                        <span class="tag">hexo</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/node-js/">
+                        <span class="tag">node.js</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/programmer-study/">
+                        <span class="tag">programmer, study</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/openmake_logo.svg" alt="혼자 놀기의 지겨움" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2020 Seungrok Han&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("ko");</script>
+
+
+<script>
+var IcarusThemeSettings = {
+    site: {
+        url: 'https://devlonesome.github.io',
+        external_link: {"enable":true,"exclude":[]}
+    },
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'unfolded'
+        }
+    }
+};
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+
+
+<script src="/js/animation.js"></script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+<script src="/js/gallery.js" defer></script>
+
+
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="입력 하세요..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '포스트',
+                PAGES: '페이지',
+                CATEGORIES: '카테고리',
+                TAGS: '태그',
+                UNTITLED: '(제목없음)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>
